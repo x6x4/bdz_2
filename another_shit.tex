@@ -59,28 +59,102 @@ $$f(z)=\frac{2z}{(z-1)(z^2+9)}=\frac{1}{5} \ \frac{1}{z-1}+
 1) в кольце \\\\
 \includegraphics[width=300pt]{img4.png} \\
 Точки $\pm 3i$ лежат вне кольца, потому 2е слагаемое соответствует
-правильной части (раскладываем по степеням $(z-1)$); 
+правильной части (раскладываем по степеням $z$); 
 аналогично, точка $1$ лежит внутри кольца и 
-1е слагаемое соответствует главной части (по степеням $\frac{1}{z-1}$). 
+1е слагаемое соответствует главной части (по степеням $\frac{1}{z}$). 
+
+$$f_1(z) = \frac{1}{5} \ \frac{1}{z-1} = \frac{1}{5} \
+\frac{1}{z} \ \frac{1}{1-\frac{1}{z}} = 
+\frac{1}{5} \ \frac{1}{z} \sum_{n=0}^{\infty}\frac{1}{z^n} = 
+\frac{1}{5} \sum_{n=0}^{\infty}\frac{1}{z^{n+1}} $$
 
 $$f_2(z) = \left(-\frac{1}{5}z+\frac{9}{5}\right) \ \frac{1}{z^2+9}=
--\frac{1}{5} \ \frac{z-9}{z^2+9}=-\frac{1}{5} 
-\left(\frac{1+3i}{2} \ \frac{1}{z+3i} 
-+ \frac{1-3i}{2} \ \frac{1}{z-3i}\right)=$$
+-\frac{1}{5} \ \frac{z-9}{z^2+9}=
+-\frac{1}{5} 
+\left(\frac{1-3i}{2} \ \frac{1}{z+3i} 
++ \frac{1+3i}{2} \ \frac{1}{z-3i}\right)=$$
+
 $$= -\frac{1}{5} 
-\left(\frac{1+3i}{2} \ \frac{1}{z - 1 + (1+3i)} 
-+ \frac{1-3i}{2} \ \frac{1}{z - 1 + (1-3i)}\right)=$$
+\left(\frac{1-3i}{6i} \ \frac{1}{1 + \frac{z}{3i}} 
+- 
+\frac{1+3i}{6i} \ \frac{1}{1 - \frac{z}{3i}}\right)=$$
+
 $$= -\frac{1}{5} 
-\left(\frac{1}{2} \ \frac{1}{1+\frac{z - 1}{1+3i}} 
-+ \frac{1}{2} \ \frac{1}{1-\frac{z-1}{1-3i}}\right)=$$
-$$= -\frac{1}{10}\left(\sum_{n=0}^{\infty}(-1)^n
-\frac{(z-1)^n}{(1+3i)^n}+\sum_{n=0}^{\infty}
-\frac{(z-1)^n}{(1-3i)^n}\right)=$$
-$$= -\frac{1}{10}\sum_{n=0}^{\infty}(z-1)^n\left(
-\frac{(-1)^n}{(1+3i)^n}+\frac{1}{(1-3i)^n}\right)$$
+\left(\left(-\frac{1}{2}+\frac{1}{6}i\right) \ \frac{1}{1 + \frac{z}{3i}} 
++
+\left(-\frac{1}{2}-\frac{1}{6}i\right) \ \frac{1}{1 - \frac{z}{3i}}\right)=$$
+
+$$= -\frac{1}{5}
+\left(\left(-\frac{1}{2}+\frac{1}{6}i\right)\sum_{n=0}^{\infty}(-1)^n
+\frac{z^n}{(3i)^n}+\left(-\frac{1}{2}-\frac{1}{6}i\right)
+\sum_{n=0}^{\infty}
+\frac{z^n}{(3i)^n}\right)=$$
+
+$$= -\frac{1}{10}\sum_{n=0}^{\infty}\frac{z^ni^n}{3^n}\left(
+{\left(-1+\frac{1}{3}i\right)}
+-(-1)^n\left(1+\frac{1}{3}i\right)\right)$$
+
 Получим\\
-$$f(z) = f_1(z) + f_2(z) = 
-\left(-\frac{1}{10}\right)\sum_{n=0}^{\infty}(z-1)^n\left(
-\frac{(-1)^n}{(1+3i)^n}+\frac{1}{(1-3i)^n}\right) 
-+ \frac{1}{5} \ \frac{1}{z-1}$$
+$$f(z) = f_1(z) + f_2(z) 
+= \frac{1}{5} \sum_{n=0}^{\infty}\frac{1}{z^{n+1}} +
+\left(-\frac{1}{10}\right) \sum_{n=0}^{\infty}\frac{z^ni^n}{3^n}\left(
+{\left(-1+\frac{1}{3}i\right)}
+-(-1)^n\left(1+\frac{1}{3}i\right)\right)$$
+
+2) в окрестности бесконечности \\
+\includegraphics[width=300pt]{img5.png} \\
+Раскладываем по степеням $\frac{1}{z}$. Для этого преобразуем $f_2(z):$
+$$f_2(z) = -\frac{1}{5} 
+\left(\frac{1-3i}{2} \ \frac{1}{z+3i} 
++ \frac{1+3i}{2} \ \frac{1}{z-3i}\right) = $$
+$$= -\frac{1}{5} 
+\left(\frac{1-3i}{2} \ \frac{1}{z} \ \frac{1}{1+\frac{3i}{z}} 
++ \frac{1+3i}{2} \ \frac{1}{z} \ \frac{1}{1-\frac{3i}{z}}\right) = $$
+
+$$= -\frac{1}{10} 
+\left((1-3i) \ \frac{1}{z} \ \frac{1}{1+\frac{3i}{z}} 
++ (1+3i) \ \frac{1}{z} \ \frac{1}{1-\frac{3i}{z}}\right) = $$
+
+$$= -\frac{1}{10} 
+\left((1-3i)\sum_{n=0}^{\infty}(-1)^n\frac{3^n i^n}{z^{n+1}}
++ (1+3i)\sum_{n=0}^{\infty}\frac{3^n i^n}{z^{n+1}}\right)=$$
+
+$$= -\frac{1}{10} 
+\left(\sum_{n=0}^{\infty}\frac{3^n i^n}{z^{n+1}}
+((-1)^n(1-3i)+(1+3i))\right)$$
+
+Итого\\
+$$f(z)= f_1(z) + f_2(z) = 
+\frac{1}{5} \sum_{n=0}^{\infty}\frac{1}{z^{n+1}} + 
+\left(-\frac{1}{10}\right) 
+\left(\sum_{n=0}^{\infty}\frac{3^n i^n}{z^{n+1}}
+((-1)^n(1-3i)+(1+3i))\right)=$$
+$$=\left(-\frac{1}{10}\right)\sum_{n=0}^{\infty}
+\frac{1}{z^{n+1}}\left(-2+3^n i^n((-1)^n(1-3i)+(1+3i))\right)$$
+9. Найти все особые точки аналитической функции, выяснить их
+характер и исследовать поведение функции на бесконечности:
+$$f(z)=\frac{1}{z-1+e^{-z}}+\cos{\frac{1}{z-1}}$$
+Важно знать:\\
+\includegraphics[width=400pt]{img7.png} \\
+Изолированные особые точки: 
+$$z-1=0 => z=1$$
+$$z-1+e^{-z}=0 <=> 1-z = e^{-z} => z=0$$
+\includegraphics[width=200pt]{img6.png} \\
+(если на бумаге, то вручную то же самое чертить - по графику видно,
+что там ровно одна точка)
+$$z\to 1: \ f(z) = \frac{1}{z-1 + \left(\frac{1}{e}\right)e^{1-z}}
++ \cos{\frac{1}{1-z}} = $$
+
+$$=\frac{1}{-(1-z) + \left(\frac{1}{e}\right)\sum_{n=0}^{\infty}
+\frac{(1-z)^n}{n!}}
++ \sum_{n=0}^{\infty}(-1)^n\frac{(\frac{1}{1-z})^{2n}}{(2n)!}$$
+Главная часть содержит бесконечно много членов, поэтому $z=1$ -
+существенно особая точка.
+$$z\to 0: \lim_{z\to 0}f(z) = \lim_{z\to 0} \left(
+\frac{1}{z-1+e^{-z}}+\cos{\frac{1}{z-1}}\right)=\infty$$
+Таким образом, $z=0$ - полюс. Найдём порядок полюса. 
+Для этого нам придется ввести вспомогательную функцию $\phi(z) = 
+\frac{1}{f(z)}$ и считать её производные, пока не получим не 0 или 
+пока не съедет крыша. Я этим не хочу заниматься, поэтому давайте лучше 
+разложим в ряд. 
 \end{document}
